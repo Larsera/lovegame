@@ -8,7 +8,7 @@ function love.load()
         velY = 0
         velX = 0
         speedlimit = 2
-        friction = 0.98
+        friction = 0.45
 
 end
 
