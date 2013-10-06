@@ -32,6 +32,11 @@ function player.update(dt)
                         velX = velX - 1
                 end
         end
+        if love.keyboard.isDown(" ") then
+                if player_y >= lg.getHeight() - 64 then
+                        velY = velY - 15
+                end
+        end
 
         velY = velY * friction
         player_y = player_y + velY
@@ -57,7 +62,7 @@ function player.update(dt)
         end
 
         if player_x <= 0 then
-                player_x = 0
+               player_x = -1
                 velX = -velX
         end
 

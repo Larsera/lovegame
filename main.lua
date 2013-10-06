@@ -1,7 +1,9 @@
+require "World"
 require "player"
 
 local lg = love.graphics
 
+setmetatable(player, World)
 -- location to save all images
 imgs = {}
 function imgs.insert(name)
