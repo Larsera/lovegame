@@ -1,8 +1,9 @@
-require "World"
-require "player"
 require "Entity"
 
 local lg = love.graphics
+
+World = {}
+World.gravity = 9
 
 -- location to save all images
 imgs = {}
@@ -12,7 +13,7 @@ end
 
 World = {}
 World.gravity = 0.8
-setmetatable(player, World)
+
 e1 = Entity:new()
 e2 = Entity:new()
 --setmetatable(e2, {__index = e1})
