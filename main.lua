@@ -8,6 +8,10 @@ function imgs.insert(name)
         imgs[name] = lg.newImage(name)
 end
 
+World = {}
+World.gravity = 0.8
+setmetatable(player, World)
+
 function love.load()
         imgs.insert("bg.png")
         imgs.insert("player.png")
