@@ -2,14 +2,13 @@ player = {}
 local lg = love.graphics
 
 function player.load(y, x, p_png)
-        player_img = lg.newImage(p_png)
+        player_img = imgs[p_png]
         player_y = y
         player_x = x
         velY = 0
         velX = 0
         speedlimit = 5
         friction = 0.96
-
 end
 
 function player.update(dt)
