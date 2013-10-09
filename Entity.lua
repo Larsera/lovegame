@@ -81,8 +81,8 @@ function Entity:update(dt)
         if math.abs(self.vel_x) < 0.1 then self.vel_x = 0 end
 end
 
-function Entity:new()
-        o = {} 
+function Entity:new(o)
+        o = o or {} 
         setmetatable(o, self)
         self.__index = self
         return o
